@@ -22,7 +22,16 @@
     </a-scene> -->
     <a-scene>
         <a-assets>
-            <audio id="click-sound" src="audio/click.ogg"></audio>
+            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
+            <audio id="whoseWoods" src="Poem_mp3s/1whoseWoods.mp3"></audio>
+            <audio id="heWill" src="Poem_mp3s/2heWill.mp3"></audio>
+            <audio id="myLittle" src="Poem_mp3s/3myLittle.mp3"></audio>
+            <audio id="betweenTheWoods" src="Poem_mp3s/4betweenTheWoods.mp3"></audio>
+            <audio id="heGives" src="Poem_mp3s/5heGives.mp3"></audio>
+            <audio id="theOnly" src="Poem_mp3s/6theOnly.mp3"></audio>
+            <audio id="theWoods" src="Poem_mp3s/7theWoods.mp3"></audio>
+            <audio id="andMiles" src="Poem_mp3s/8andMiles.mp3"></audio>
 
             <!-- Images -->
             <img id="image1" src="images/image1.jpg">
@@ -32,7 +41,8 @@
             <img id="image5" src="images/image5.jpg">
             <img id="image6" src="images/image6.jpg">
 
-            <script id="link" type="text/html">
+            <!--Each image has it's own link with a different audio clip that plays-->
+            <script id="link1" type="text/html">
                 <a-entity class="link"
                   geometry="primitive: plane; height: 1; width: 1"
                   material="shader: flat; src: ${thumb}"
@@ -41,8 +51,54 @@
                   event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
                   event-set__4="_event: mouseleave; scale: 1 1 1"
                   set-image="on: click; target: #image-360; src: ${src}"
-                  sound="on: click; src: #click-sound"></a-entity>
+                  sound="on: click; src: #whoseWoods"></a-entity>
               </script>
+            <script id="link2" type="text/html">
+                <a-entity class="link"
+                          geometry="primitive: plane; height: 1; width: 1"
+                          material="shader: flat; src: ${thumb}"
+                          event-set__1="_event: mousedown; scale: 1 1 1"
+                          event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+                          event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+                          event-set__4="_event: mouseleave; scale: 1 1 1"
+                          set-image="on: click; target: #image-360; src: ${src}"
+                          sound="on: click; src: #heWill"></a-entity>
+            </script>
+            <script id="link3" type="text/html">
+                <a-entity class="link"
+                          geometry="primitive: plane; height: 1; width: 1"
+                          material="shader: flat; src: ${thumb}"
+                          event-set__1="_event: mousedown; scale: 1 1 1"
+                          event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+                          event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+                          event-set__4="_event: mouseleave; scale: 1 1 1"
+                          set-image="on: click; target: #image-360; src: ${src}"
+                          sound="on: click; src: #myLittle"></a-entity>
+            </script>
+            <script id="link4" type="text/html">
+                <a-entity class="link"
+                          geometry="primitive: plane; height: 1; width: 1"
+                          material="shader: flat; src: ${thumb}"
+                          event-set__1="_event: mousedown; scale: 1 1 1"
+                          event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+                          event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+                          event-set__4="_event: mouseleave; scale: 1 1 1"
+                          set-image="on: click; target: #image-360; src: ${src}"
+                          sound="on: click; src: #betweenTheWoods"></a-entity>
+            </script>
+            <script id="link5" type="text/html">
+                <a-entity class="link"
+                          geometry="primitive: plane; height: 1; width: 1"
+                          material="shader: flat; src: ${thumb}"
+                          event-set__1="_event: mousedown; scale: 1 1 1"
+                          event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+                          event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+                          event-set__4="_event: mouseleave; scale: 1 1 1"
+                          set-image="on: click; target: #image-360; src: ${src}"
+                          sound="on: click; src: #heGives"></a-entity>
+            </script>
+            <!--End of the links for each image/audio file-->
+
         </a-assets>
 
         <!-- 360-degree image. -->
@@ -50,11 +106,11 @@
 
         <!-- Link we will build. -->
         <a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4">
-            <a-entity template="src: #link" data-src="#image2" data-thumb="#image2"></a-entity>
-            <a-entity template="src: #link" data-src="#image3" data-thumb="#image3"></a-entity>
-            <a-entity template="src: #link" data-src="#image4" data-thumb="#image4"></a-entity>
-            <a-entity template="src: #link" data-src="#image5" data-thumb="#image5"></a-entity>
-            <a-entity template="src: #link" data-src="#image6" data-thumb="#image6"></a-entity>
+            <a-entity template="src: #link1" data-src="#image2" data-thumb="#image2"></a-entity>
+            <a-entity template="src: #link2" data-src="#image3" data-thumb="#image3"></a-entity>
+            <a-entity template="src: #link3" data-src="#image4" data-thumb="#image4"></a-entity>
+            <a-entity template="src: #link4" data-src="#image5" data-thumb="#image5"></a-entity>
+            <a-entity template="src: #link5" data-src="#image6" data-thumb="#image6"></a-entity>
         </a-entity>
 
         <!-- Camera + cursor. -->
