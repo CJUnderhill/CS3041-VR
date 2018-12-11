@@ -105,6 +105,14 @@
             <img id="image6" src="images/image6.jpg">
             <img id="image7" src="images/image7.jpg">
             <img id="image8" src="images/image8.jpg">
+            <img id="thumb1" src="images/p1-thumb.png">
+            <img id="thumb2" src="images/p2-thumb.png">
+            <img id="thumb3" src="images/p3-thumb.png">
+            <img id="thumb4" src="images/p4-thumb.png">
+            <img id="thumb5" src="images/p5-thumb.png">
+            <img id="thumb6" src="images/p6-thumb.png">
+            <img id="thumb7" src="images/p7-thumb.png">
+            <img id="thumb8" src="images/p8-thumb.png">
 
             <!--Each image has it's own link with a different audio clip that plays-->
             <script id="link" type="text/html">
@@ -127,22 +135,22 @@
 
         <!-- Link we will build. -->
         <a-entity id="links" layout="layout: line; margin: 1.5" position="-6 1 -4">
-            <a-entity id="scene1" visible="true" onclick="scene1()" template="src: #link" data-src="#image1" data-thumb="#image1"
+            <a-entity id="scene1" visible="true" onclick="scene1()" template="src: #link" data-src="#image1" data-thumb="#thumb1"
                 data-audio="#whoseWoods"></a-entity>
             <a-entity id="scene2" visible="false" onclick="scene2()" template="src: #link" data-src="#image2"
-                data-thumb="#image2" data-audio="#heWill"></a-entity>
+                data-thumb="#thumb2" data-audio="#heWill"></a-entity>
             <a-entity id="scene3" visible="false" onclick="scene3()" template="src: #link" data-src="#image3"
-                data-thumb="#image3" data-audio="#myLittle"></a-entity>
+                data-thumb="#thumb3" data-audio="#myLittle"></a-entity>
             <a-entity id="scene4" visible="false" onclick="scene4()" template="src: #link" data-src="#image4"
-                data-thumb="#image4" data-audio="#betweenTheWoods"></a-entity>
+                data-thumb="#thumb4" data-audio="#betweenTheWoods"></a-entity>
             <a-entity id="scene5" visible="false" onclick="scene5()" template="src: #link" data-src="#image5"
-                data-thumb="#image5" data-audio="#heGives"></a-entity>
+                data-thumb="#thumb5" data-audio="#heGives"></a-entity>
             <a-entity id="scene6" visible="false" onclick="scene6()" template="src: #link" data-src="#image6"
-                data-thumb="#image6" data-audio="#theOnly"></a-entity>
+                data-thumb="#thumb6" data-audio="#theOnly"></a-entity>
             <a-entity id="scene7" visible="false" onclick="scene7()" template="src: #link" data-src="#image7"
-                data-thumb="#image7" data-audio="#theWoods"></a-entity>
+                data-thumb="#thumb7" data-audio="#theWoods"></a-entity>
             <a-entity id="scene8" visible="false" onclick="scene8()" template="src: #link" data-src="#image8"
-                data-thumb="#image8" data-audio="#andMiles"></a-entity>
+                data-thumb="#thumb8" data-audio="#andMiles"></a-entity>
         </a-entity>
 
         <!-- Camera + cursor. -->
