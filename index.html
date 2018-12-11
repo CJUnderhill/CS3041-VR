@@ -14,6 +14,43 @@
     <script src="set-image.js"></script>
 </head>
 
+<!--Scene transition functions, hide and shows thumbnail links in order-->
+<script type="text/javascript">
+    function scene1to2() {
+        document.getElementById('scene1').setAttribute('visible', 'false');
+        document.getElementById('scene2').setAttribute('visible', 'true');
+    }
+    function scene2to3() {
+        document.getElementById('scene2').setAttribute('visible', 'false')
+        document.getElementById('scene3').setAttribute('visible', 'true')
+    }
+    function scene3to4() {
+        document.getElementById('scene3').setAttribute('visible', 'false')
+        document.getElementById('scene4').setAttribute('visible', 'true')
+    }
+    function scene4to5() {
+        document.getElementById('scene4').setAttribute('visible', 'false')
+        document.getElementById('scene5').setAttribute('visible', 'true')
+    }
+    function scene5to6() {
+        document.getElementById('scene5').setAttribute('visible', 'false')
+        document.getElementById('scene6').setAttribute('visible', 'true')
+    }
+    function scene6to7() {
+        document.getElementById('scene6').setAttribute('visible', 'false')
+        document.getElementById('scene7').setAttribute('visible', 'true')
+    }
+    function scene7to8() {
+        document.getElementById('scene7').setAttribute('visible', 'false')
+        document.getElementById('scene8').setAttribute('visible', 'true')
+    }
+    function scene8to1() {
+        document.getElementById('scene8').setAttribute('visible', 'false')
+        document.getElementById('scene1').setAttribute('visible', 'true')
+    }
+
+</script>
+
 <body>
     <!-- <a-scene>
         <a-sky src="images/image1.jpg" rotation="0 -130 0"></a-sky>
@@ -27,7 +64,17 @@
         </a-assets>
         <a-sky id="image-360" radius="10" src="#splash"></a-sky>
     </a-scene> -->
-    
+    <script>
+        AFRAME.registerComponent('log', {
+        schema: {type: 'string'},
+
+        init: function () {
+            var stringToLog = this.data;
+            console.log(stringToLog);
+            console.log("testing");
+        }
+    });
+    </script>
     <a-scene>
         <a-assets>
             <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
@@ -75,14 +122,14 @@
 
         <!-- Link we will build. -->
         <a-entity id="links" layout="layout: line; margin: 1.5" position="-4 0 -4">
-            <a-entity template="src: #link" data-src="#image1" data-thumb="#image1" data-audio="#whoseWoods"></a-entity>
-            <a-entity template="src: #link" data-src="#image2" data-thumb="#image2" data-audio="#heWill"></a-entity>
-            <a-entity template="src: #link" data-src="#image3" data-thumb="#image3" data-audio="#myLittle"></a-entity>
-            <a-entity template="src: #link" data-src="#image4" data-thumb="#image4" data-audio="#betweenTheWoods"></a-entity>
-            <a-entity template="src: #link" data-src="#image5" data-thumb="#image5" data-audio="#heGives"></a-entity>
-            <a-entity template="src: #link" data-src="#image6" data-thumb="#image6" data-audio="#theOnly"></a-entity>
-            <a-entity template="src: #link" data-src="#image7" data-thumb="#image7" data-audio="#theWoods"></a-entity>
-            <a-entity template="src: #link" data-src="#image8" data-thumb="#image8" data-audio="#andMiles"></a-entity>
+            <a-entity id="scene1" visible="true" onclick="scene1to2()" template="src: #link" data-src="#image1" data-thumb="#image1" data-audio="#whoseWoods"></a-entity>
+            <a-entity id="scene2" visible="false" onclick="scene2to3()" template="src: #link" data-src="#image2" data-thumb="#image2" data-audio="#heWill"></a-entity>
+            <a-entity id="scene3" visible="false" onclick="scene3to4()" template="src: #link" data-src="#image3" data-thumb="#image3" data-audio="#myLittle"></a-entity>
+            <a-entity id="scene4" visible="false" onclick="scene4to5()" template="src: #link" data-src="#image4" data-thumb="#image4" data-audio="#betweenTheWoods"></a-entity>
+            <a-entity id="scene5" visible="false" onclick="scene5to6()" template="src: #link" data-src="#image5" data-thumb="#image5" data-audio="#heGives"></a-entity>
+            <a-entity id="scene6" visible="false" onclick="scene6to7()" template="src: #link" data-src="#image6" data-thumb="#image6" data-audio="#theOnly"></a-entity>
+            <a-entity id="scene7" visible="false" onclick="scene7to8()" template="src: #link" data-src="#image7" data-thumb="#image7" data-audio="#theWoods"></a-entity>
+            <a-entity id="scene8" visible="false" onclick="scene8to1()" template="src: #link" data-src="#image8" data-thumb="#image8" data-audio="#andMiles"></a-entity>
         </a-entity>
 
         <!-- Camera + cursor. -->
@@ -92,7 +139,9 @@
                 event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black"
                 fuse="true" raycaster="objects: .link"></a-cursor>
         </a-entity>
+
     </a-scene>
 </body>
+
 
 </html>
