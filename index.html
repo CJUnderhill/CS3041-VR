@@ -20,6 +20,7 @@
         document.getElementById('scene1').setAttribute('visible', 'false');
         document.getElementById('scene2').setAttribute('visible', 'true');
         document.getElementById('title').setAttribute('visible', 'false');
+        document.getElementById('welcome').setAttribute('visible', 'false');
         document.getElementById('text1').setAttribute('visible', 'true');
     }
     function scene2() {
@@ -68,18 +69,6 @@
 </script>
 
 <body>
-    <!-- <a-scene>
-        <a-sky src="images/image1.jpg" rotation="0 -130 0"></a-sky>
-
-        <a-text font="kelsonsans" value="SNOWY ROADS" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0"></a-text>
-    </a-scene> -->
-
-    <!-- <a-scene>
-        <a-assets>
-            <img id="splash" src="images/splash.jpg">
-        </a-assets>
-        <a-sky id="image-360" radius="10" src="#splash"></a-sky>
-    </a-scene> -->
     <script>
         AFRAME.registerComponent('log', {
             schema: { type: 'string' },
@@ -97,14 +86,14 @@
 
             <!-- Audio files -->
             <!-- NOTE: the id's for these can't start with a number (i.e. 7name5) or it will not work -->
-            <audio id="whoseWoods" src="Poem_mp3s/1whoseWoods.mp3"></audio>
-            <audio id="heWill" src="Poem_mp3s/2heWill.mp3"></audio>
-            <audio id="myLittle" src="Poem_mp3s/3myLittle.mp3"></audio>
-            <audio id="betweenTheWoods" src="Poem_mp3s/4betweenTheWoods.mp3"></audio>
-            <audio id="heGives" src="Poem_mp3s/5heGives.mp3"></audio>
-            <audio id="theOnly" src="Poem_mp3s/6theOnly.mp3"></audio>
-            <audio id="theWoods" src="Poem_mp3s/7theWoods.mp3"></audio>
-            <audio id="andMiles" src="Poem_mp3s/8andMiles.mp3"></audio>
+            <audio id="whoseWoods" src="audio/poem_cuts/1whoseWoods.mp3"></audio>
+            <audio id="heWill" src="audio/poem_cuts/2heWill.mp3"></audio>
+            <audio id="myLittle" src="audio/poem_cuts/3myLittle.mp3"></audio>
+            <audio id="betweenTheWoods" src="audio/poem_cuts/4betweenTheWoods.mp3"></audio>
+            <audio id="heGives" src="audio/poem_cuts/5heGives.mp3"></audio>
+            <audio id="theOnly" src="audio/poem_cuts/6theOnly.mp3"></audio>
+            <audio id="theWoods" src="audio/poem_cuts/7theWoods.mp3"></audio>
+            <audio id="andMiles" src="audio/poem_cuts/8andMiles.mp3"></audio>
 
             <!-- Images -->
             <img id="splash" src="images/splash.jpg">
@@ -163,7 +152,9 @@
                 event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black"
                 fuse="true" raycaster="objects: .link"></a-cursor>
 
-            <a-entity id="title" position="0 -1 -2" visible="true" geometry="primitive: plane; width:4; height: .5;"
+            <a-entity id="welcome" position="0 -1.18 -2" visible="true" geometry="primitive: plane; width:8; height: 1;"
+                material="color: #333333; opacity: 0.7" text="color: white; width: 4; align: center; value: Welcome to our poetry explorer!\nTo explore this poem, hover over and select the image portal and listen to the audio. When you're done, select the next image portal to move on."></a-entity>
+            <a-entity id="title" position="0 1.2 -2" visible="true" geometry="primitive: plane; width:4; height: .5;"
                 material="color: #333333; opacity: 0.7" text="color: white; align: center; value: Stopping by Woods on a Snowy Evening,\n by Robert Frost"></a-entity>
             <a-entity id="text1" position="0 -1 -2" visible="false" geometry="primitive: plane; width:4; height: .5;"
                 material="color: #333333; opacity: 0.7" text="color: white; align: center; value: Whose woods these are I think I know.\n His house is in the village though"></a-entity>
