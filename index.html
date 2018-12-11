@@ -16,37 +16,53 @@
 
 <!--Scene transition functions, hide and shows thumbnail links in order-->
 <script type="text/javascript">
-    function scene1to2() {
+    function scene1() {
         document.getElementById('scene1').setAttribute('visible', 'false');
         document.getElementById('scene2').setAttribute('visible', 'true');
+        document.getElementById('title').setAttribute('visible', 'false');
+        document.getElementById('text1').setAttribute('visible', 'true');
     }
-    function scene2to3() {
-        document.getElementById('scene2').setAttribute('visible', 'false')
-        document.getElementById('scene3').setAttribute('visible', 'true')
+    function scene2() {
+        document.getElementById('scene2').setAttribute('visible', 'false');
+        document.getElementById('scene3').setAttribute('visible', 'true');
+        document.getElementById('text1').setAttribute('visible', 'false');
+        document.getElementById('text2').setAttribute('visible', 'true');
     }
-    function scene3to4() {
-        document.getElementById('scene3').setAttribute('visible', 'false')
-        document.getElementById('scene4').setAttribute('visible', 'true')
+    function scene3() {
+        document.getElementById('scene3').setAttribute('visible', 'false');
+        document.getElementById('scene4').setAttribute('visible', 'true');
+        document.getElementById('text2').setAttribute('visible', 'false');
+        document.getElementById('text3').setAttribute('visible', 'true');
     }
-    function scene4to5() {
-        document.getElementById('scene4').setAttribute('visible', 'false')
-        document.getElementById('scene5').setAttribute('visible', 'true')
+    function scene4() {
+        document.getElementById('scene4').setAttribute('visible', 'false');
+        document.getElementById('scene5').setAttribute('visible', 'true');
+        document.getElementById('text3').setAttribute('visible', 'false');
+        document.getElementById('text4').setAttribute('visible', 'true');
     }
-    function scene5to6() {
-        document.getElementById('scene5').setAttribute('visible', 'false')
-        document.getElementById('scene6').setAttribute('visible', 'true')
+    function scene5() {
+        document.getElementById('scene5').setAttribute('visible', 'false');
+        document.getElementById('scene6').setAttribute('visible', 'true');
+        document.getElementById('text4').setAttribute('visible', 'false');
+        document.getElementById('text5').setAttribute('visible', 'true');
     }
-    function scene6to7() {
-        document.getElementById('scene6').setAttribute('visible', 'false')
-        document.getElementById('scene7').setAttribute('visible', 'true')
+    function scene6() {
+        document.getElementById('scene6').setAttribute('visible', 'false');
+        document.getElementById('scene7').setAttribute('visible', 'true');
+        document.getElementById('text5').setAttribute('visible', 'false');
+        document.getElementById('text6').setAttribute('visible', 'true');
     }
-    function scene7to8() {
-        document.getElementById('scene7').setAttribute('visible', 'false')
-        document.getElementById('scene8').setAttribute('visible', 'true')
+    function scene7() {
+        document.getElementById('scene7').setAttribute('visible', 'false');
+        document.getElementById('scene8').setAttribute('visible', 'true');
+        document.getElementById('text6').setAttribute('visible', 'false');
+        document.getElementById('text7').setAttribute('visible', 'true');
     }
-    function scene8to1() {
-        document.getElementById('scene8').setAttribute('visible', 'false')
-        document.getElementById('scene1').setAttribute('visible', 'true')
+    function scene8() {
+        document.getElementById('scene8').setAttribute('visible', 'false');
+        document.getElementById('scene1').setAttribute('visible', 'true');
+        document.getElementById('text7').setAttribute('visible', 'false');
+        document.getElementById('text8').setAttribute('visible', 'true');
     }
 
 </script>
@@ -121,16 +137,17 @@
         <a-sky id="image-360" radius="10" src="#splash"></a-sky>
 
         <!-- Link we will build. -->
-        <a-entity id="links" layout="layout: line; margin: 1.5" position="-4 0 -4">
-            <a-entity id="scene1" visible="true" onclick="scene1to2()" template="src: #link" data-src="#image1" data-thumb="#image1" data-audio="#whoseWoods"></a-entity>
-            <a-entity id="scene2" visible="false" onclick="scene2to3()" template="src: #link" data-src="#image2" data-thumb="#image2" data-audio="#heWill"></a-entity>
-            <a-entity id="scene3" visible="false" onclick="scene3to4()" template="src: #link" data-src="#image3" data-thumb="#image3" data-audio="#myLittle"></a-entity>
-            <a-entity id="scene4" visible="false" onclick="scene4to5()" template="src: #link" data-src="#image4" data-thumb="#image4" data-audio="#betweenTheWoods"></a-entity>
-            <a-entity id="scene5" visible="false" onclick="scene5to6()" template="src: #link" data-src="#image5" data-thumb="#image5" data-audio="#heGives"></a-entity>
-            <a-entity id="scene6" visible="false" onclick="scene6to7()" template="src: #link" data-src="#image6" data-thumb="#image6" data-audio="#theOnly"></a-entity>
-            <a-entity id="scene7" visible="false" onclick="scene7to8()" template="src: #link" data-src="#image7" data-thumb="#image7" data-audio="#theWoods"></a-entity>
-            <a-entity id="scene8" visible="false" onclick="scene8to1()" template="src: #link" data-src="#image8" data-thumb="#image8" data-audio="#andMiles"></a-entity>
+        <a-entity id="links" layout="layout: line; margin: 1.5" position="-6 1 -4">
+            <a-entity id="scene1" visible="true" onclick="scene1()" template="src: #link" data-src="#image1" data-thumb="#image1" data-audio="#whoseWoods"></a-entity>
+            <a-entity id="scene2" visible="false" onclick="scene2()" template="src: #link" data-src="#image2" data-thumb="#image2" data-audio="#heWill"></a-entity>
+            <a-entity id="scene3" visible="false" onclick="scene3()" template="src: #link" data-src="#image3" data-thumb="#image3" data-audio="#myLittle"></a-entity>
+            <a-entity id="scene4" visible="false" onclick="scene4()" template="src: #link" data-src="#image4" data-thumb="#image4" data-audio="#betweenTheWoods"></a-entity>
+            <a-entity id="scene5" visible="false" onclick="scene5()" template="src: #link" data-src="#image5" data-thumb="#image5" data-audio="#heGives"></a-entity>
+            <a-entity id="scene6" visible="false" onclick="scene6()" template="src: #link" data-src="#image6" data-thumb="#image6" data-audio="#theOnly"></a-entity>
+            <a-entity id="scene7" visible="false" onclick="scene7()" template="src: #link" data-src="#image7" data-thumb="#image7" data-audio="#theWoods"></a-entity>
+            <a-entity id="scene8" visible="false" onclick="scene8()" template="src: #link" data-src="#image8" data-thumb="#image8" data-audio="#andMiles"></a-entity>
         </a-entity>
+
 
         <!-- Camera + cursor. -->
         <a-entity camera look-controls>
@@ -138,6 +155,28 @@
                 animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
                 event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black"
                 fuse="true" raycaster="objects: .link"></a-cursor>
+
+            <a-text id="title" visible="true" value= "Stopping by Woods on a Snowy Evening,\n by Robert Frost"
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text1" visible="false" value= "Whose woods these are I think I know.\n His house is in the village though"
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text2" visible="false" value="He will not see me stopping here\n To watch his woods fill up with snow."
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text3" visible="false" value="My little horse must think it queer\n To stop without a farmhouse near"
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text4" visible="false" value="Between the woods and frozen lake\n The darkest evening of the year."
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text5" visible="false" value="He gives his harness bells a shake\n To ask if there is some mistake."
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text6" visible="false" value="The only other sound’s the sweep\n Of easy wind and downy flake."
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text7" visible="false" value="The woods are lovely, dark and deep,\n But I have promises to keep,"
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+            <a-text id="text8" visible="false" value="And miles to go before I sleep,\n And miles to go before I sleep."
+                    position="0 -1 -2" align="center" anchor="center" baseline="top"></a-text>
+
+
+
         </a-entity>
 
     </a-scene>
