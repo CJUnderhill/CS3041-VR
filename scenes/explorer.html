@@ -1,0 +1,23 @@
+
+
+<!-- 360-degree image. -->
+<a-sky id="image-360" radius="10" src="#image1"></a-sky>
+
+<!-- Link we will build. -->
+<a-entity id="links" layout="layout: line; margin: 1.5" position="-4 0 -4">
+    <a-entity template="src: #link" data-src="#image1" data-thumb="#image1" data-audio="#whoseWoods"></a-entity>
+    <a-entity template="src: #link" data-src="#image2" data-thumb="#image2" data-audio="#heWill"></a-entity>
+    <a-entity template="src: #link" data-src="#image3" data-thumb="#image3" data-audio="#myLittle"></a-entity>
+    <a-entity template="src: #link" data-src="#image4" data-thumb="#image4" data-audio="#betweenTheWoods"></a-entity>
+    <a-entity template="src: #link" data-src="#image5" data-thumb="#image5" data-audio="#heGives"></a-entity>
+    <a-entity template="src: #link" data-src="#image6" data-thumb="#image6" data-audio="#theOnly"></a-entity>
+    <a-entity template="src: #link" data-src="#image7" data-thumb="#image7" data-audio="#theWoods"></a-entity>
+    <a-entity template="src: #link" data-src="#image8" data-thumb="#image8" data-audio="#andMiles"></a-entity>
+</a-entity>
+
+<!-- Camera + cursor. -->
+<a-entity camera look-controls>
+    <a-cursor id="cursor" animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+        animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500" event-set__1="_event: mouseenter; color: springgreen"
+        event-set__2="_event: mouseleave; color: black" fuse="true" raycaster="objects: .link"></a-cursor>
+</a-entity>

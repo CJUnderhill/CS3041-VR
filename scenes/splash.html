@@ -1,0 +1,21 @@
+<!-- <a-image id="image-360" src="#splash"></a-image>
+
+<a-entity id="links" layout="layout: line; margin: 1.5" position="3 0 -4">
+    <a-entity template="src: #link" data-src="#image1" data-thumb="#image1" data-audio="#whoseWoods"></a-entity>
+</a-entity>
+
+<a-entity camera look-controls>
+    <a-cursor id="cursor" animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+        animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500" event-set__1="_event: mouseenter; color: springgreen"
+        event-set__2="_event: mouseleave; color: black" fuse="true" raycaster="objects: .link"></a-cursor>
+</a-entity> -->
+
+<div style="width: 100vw; height: 100vh; background-image: url('../images/splash.jpg'); background-size: 100vw 100vh;" id="linkToExplorer" onclick="fadeAway">
+
+</div>
+
+<script>
+    function fadeAway() {
+        document.getElementById("linkToExplorer").setAttribute("visible", "false");
+    }
+</script>
